@@ -14,18 +14,32 @@ class Shop
     return @color
   end
 
+  
+  def brand=(brand)
+    return @brand
+  end
+
   def brand
     return @brand
   end
+
 
   def price
     return @price
   end
 
+  def price=(price)
+    return @price
+  end
+
+
   def info
-    return "In my shop, I have " + name + " made by " + brand + " and it has a " + color + " color. If you want to buy it, it cost " + price.to_s
+    return "In my shop, I have  #{name} made by #{brand} and it has a #{color} color. If you want to buy it, it cost #{price}"
   end
 end
 
 shop = Shop.new("car", "black", "Ferrarri", 15000)
 puts shop.info
+shop.brand=("Bugatti") 
+shop.price= 20000
+puts shop.brand=("Bugatti") 
