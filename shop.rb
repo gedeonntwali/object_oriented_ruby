@@ -5,11 +5,11 @@ class Shop
 
 
 
-  def initialize(name, color, brand, price)
-    @name = name
-    @color = color
-    @brand = brand
-    @price = price
+  def initialize(hash)
+    @name = hash[:name]
+    @color = hash[:color]
+    @brand = hash[:brand]
+    @price = hash[:price]
   end
 
   def info
@@ -17,7 +17,7 @@ class Shop
   end
 end
 
-shop = Shop.new("car", "black", "Ferrarri", 15000)
+shop = Shop.new({name: "car", color: "black", brand: "Ferrarri", price: 15000})
 puts shop.info
 shop.brand = "Bugatti"
 shop.price = 20000
