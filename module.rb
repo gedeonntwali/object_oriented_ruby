@@ -1,6 +1,4 @@
-
-class Vehicle
-
+module Vehicleclass
   def initialize
     @speed = 0
     @direction = 'north'
@@ -19,22 +17,22 @@ class Vehicle
   end
 end
 
-class Car < Vehicle 
+class Car
+  include Vehicleclass  
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
- 
-class Bike < Vehicle
+
+class Bike
+  include Vehicleclass  
+
   def ring_bell
-  puts "Ring ring!"
+    puts "Ring ring!"
   end
 end
 
+car = Car.new
+bike = Bike.new
 
-mycar = Car.new
-mybike = Bike.new
-
-puts mycar.honk_horn
-puts mybike.accelerate
-puts mybike.turn("south")
+puts car.brake
