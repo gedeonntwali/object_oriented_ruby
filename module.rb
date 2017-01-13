@@ -1,4 +1,4 @@
-module Vehicleclass
+module motion #we have to choose the name of module that related to the information added
   def initialize
     @speed = 0
     @direction = 'north'
